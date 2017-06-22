@@ -10,9 +10,9 @@ $ cp .* ~
 
 Install figlet, fortune-mod, cowsay and lolcat gem
 
-[Set up Sublime vimrc](https://github.com/grigio/vim-sublime).
+[Set up Sublime vimrc](https://github.com/grigio/vim-sublime)
 
-[Set up copy paste from Stack Overflow](https://github.com/MilesCranmer/gso). Shortcut is ctrl+e
+[Set up copy paste from Stack Overflow](https://github.com/MilesCranmer/gso)
 
 Finally, source your bashrc:
 ```
