@@ -92,6 +92,10 @@ alias path='echo -e ${PATH//:\\n}'
 alias time='date +"it is %r on %a, %b %d - %D"'
 alias weather='curl wttr.in/nyc'
 
+# Copy pasting from Stack Overflow vim extension
+export SE_KEY="NExeVkJzlom8ZUagXLcHQA(("
+export GOOGLE_KEY="AIzaSyAk7sxnY_yHAP2OIdSOrgf9JysO8E_xJRo"
+
 export PS1="\W\`parse_git_branch\`\\$ "
 export SVN_EDITOR=vim
 export EDITOR=vim
