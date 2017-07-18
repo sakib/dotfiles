@@ -14,6 +14,8 @@ Install figlet, fortune-mod, cowsay and lolcat gem
 
 [Set up copy paste from Stack Overflow](https://github.com/MilesCranmer/gso)
 
+[Manually install Solarized Dark vim colorscheme](https://github.com/altercation/vim-colors-solarized)
+
 Finally, source your bashrc:
 ```
 $ source ~/.bashrc
