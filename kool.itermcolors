@@ -250,7 +250,7 @@
 	<key>HotKeyTogglesWindow</key>
 	<true/>
 	<key>Hotkey</key>
-	<true/>
+	<false/>
 	<key>HotkeyChar</key>
 	<integer>84</integer>
 	<key>HotkeyCode</key>
@@ -299,11 +299,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1169 50 445 163 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>-1431 1143 599 502 -1700 1050 2560 1440 </string>
+	<string>148 54 606 456 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-271 1882 796 473 -1700 1050 2560 1417 </string>
+	<string>-269 1905 796 473 -1698 1050 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>89 593 570 427 0 0 1680 1027 </string>
+	<string>0 15 1674 1013 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>89 161 3090 864 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -1639,8 +1639,12 @@
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>522088919.63349301</real>
+	<key>OpenTmuxWindowsIn</key>
+	<integer>0</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1676,12 +1680,18 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/sakib.jalal/hackny/iterm</string>
+	<key>SUEnableAutomaticChecks</key>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
 	<string>https://iterm2.com/appcasts/final.xml?shard=11</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
+	<key>SULastCheckTime</key>
+	<date>2017-08-04T07:41:54Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowNewOutputIndicator</key>
