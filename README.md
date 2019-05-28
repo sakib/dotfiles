@@ -1,24 +1,21 @@
-# sakib's dotfiles
-setting up bash, vim, git
+# sakib's dev environment
 
-How to:
+Clone:
 ```
 $ git clone https://github.com/sakib/dotfiles
 $ cd dotfiles
-$ cp .* ~
+$ cp * ~
 ```
 
-Install figlet, fortune-mod, cowsay and lolcat gem
+Follow these instructions:
 
-[Set up Sublime vimrc](https://github.com/grigio/vim-sublime)
+1. If using OSX, [install iTerm](https://www.iterm2.com/) and import DimmedMonokai as Color Preset. Else, just use the .bashrc and source it at the end.
+2. [Sublime .vimrc](https://github.com/grigio/vim-sublime)
+3. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
+4. [Pure Prompt](https://github.com/sindresorhus/pure)
+5. [Auto Suggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 
-[Set up copy paste from Stack Overflow](https://github.com/MilesCranmer/gso)
-
-OS X: [Manually install Solarized Dark vim colorscheme](https://github.com/altercation/vim-colors-solarized)
-
-OS X: [Install iTerm](https://www.iterm2.com/) and [activate theme](https://draculatheme.com/iterm/) (follow "Activate Theme")
-
-Finally, source your bashrc:
+Finally, restart Zsh:
 ```
-$ source ~/.bashrc
+$ zsh
 ```
