@@ -14,6 +14,8 @@ Follow these instructions:
 3. [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 4. [Pure Prompt](https://github.com/sindresorhus/pure)
 5. [Auto Suggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+6. [Powerlevel 10k](https://github.com/romkatv/powerlevel10k)
+7. [Frick's Power Finders](https://gist.github.com/mdbfrick/2114066b1f4523727c74daf593ee9644)
 
 Finally, restart Zsh:
 ```
