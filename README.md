@@ -16,6 +16,7 @@ Follow these instructions:
 5. [Auto Suggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 6. [Powerlevel 10k](https://github.com/romkatv/powerlevel10k)
 7. [Frick's Power Finders](https://gist.github.com/mdbfrick/2114066b1f4523727c74daf593ee9644)
+8. [Modern Unix Tools](https://github.com/ibraheemdev/modern-unix)
 
 Finally, restart Zsh:
 ```
