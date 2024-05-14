@@ -17,6 +17,7 @@ Follow these instructions:
 6. [Powerlevel 10k](https://github.com/romkatv/powerlevel10k)
 7. [Frick's Power Finders](https://gist.github.com/mdbfrick/2114066b1f4523727c74daf593ee9644)
 8. [Modern Unix Tools](https://github.com/ibraheemdev/modern-unix)
+9. [Github CLI](https://github.com/cli/cli?tab=readme-ov-file#installation)
 
 Finally, restart Zsh:
 ```
