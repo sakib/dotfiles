@@ -28,3 +28,4 @@ Useful packages on MacOS:
 * [Homebrew](https://brew.sh/)
 * [Fuzzy Finder](https://github.com/junegunn/fzf)
 * [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+* [Neovim](https://neovim.io/)
