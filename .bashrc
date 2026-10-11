@@ -5,8 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i*  ]] && return
 
-export TERM="xterm-256color"
-
 # get current branch in git repo
 function parse_git_branch() {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -92,15 +90,18 @@ alias path='echo -e ${PATH//:\\n}'
 alias time='date +"it is %r on %a, %b %d - %D"'
 alias weather='curl wttr.in/nyc'
 
-# Copy pasting from Stack Overflow vim extension
-export SE_KEY="NExeVkJzlom8ZUagXLcHQA(("
-export GOOGLE_KEY="AIzaSyAk7sxnY_yHAP2OIdSOrgf9JysO8E_xJRo"
-
 export PS1="\W\`parse_git_branch\`\\$ "
-export SVN_EDITOR=vim
 export EDITOR=vim
 
 source $HOME/.bash_git
 source $HOME/.bash_prompt
 
-export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export PATH=$HOME/.local/bin:$HOME/bin:$PATH
+
+# mise: CLI tools from ~/.config/mise/config.toml
+if hash mise 2>/dev/null; then
+  eval "$(mise activate bash)"
+fi
+
+# Machine-specific settings and secrets (not tracked)
+[ -f ~/.bashrc.local ] && source ~/.bashrc.local
