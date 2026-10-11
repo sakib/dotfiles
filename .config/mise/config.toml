@@ -1,0 +1,15 @@
+# CLI tools, installed by mise (https://mise.jdx.dev) on macOS and Linux.
+#   mise install   install anything missing
+#   mise upgrade   update everything
+#   mise use -g <tool>@latest   add a tool (writes back to this file)
+
+[tools]
+bat = "latest"
+eza = "latest"
+fd = "latest"
+fzf = "latest"
+gh = "latest"
+glow = "latest"
+"aqua:neovim/neovim" = "latest"
+ripgrep = "latest"
+uv = "latest"

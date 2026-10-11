@@ -1,20 +1,19 @@
 # http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/ Reference
 # core {{{
 [core]
-    editor = /usr/bin/vim
-    excludesfile = /Users/np/.gitignore_global
+    editor = vim
     pager=less -x4
 
 #}}}
 # user {{{
 [user]
-    email = npaolucci@atlassian.com
-    name = Nicola Paolucci
+    email = sakib.jalal@gmail.com
+    name = Sakib Jalal
 
 #}}}
-# include sendemail config {{{
+# machine-specific overrides (e.g. a work email), not tracked {{{
 [include]
-    path = ~/.git-sendemail
+    path = ~/.gitconfig.local
 # }}}
 # color {{{
 [color]
@@ -41,12 +40,18 @@
 
 # }}}
 # push/pull/diff/options {{{
+[init]
+    defaultBranch = main
 [push]
     default = current
+    autoSetupRemote = true
 [pull]
-    default = current
+    rebase = true
+[fetch]
+    prune = true
 [diff]
     mnemonicprefix = true
+    colorMoved = default
 [branch]
     autosetuprebase = always
 [apply]
@@ -66,9 +71,6 @@
     gr = grep -Ii
     # }}}
     # tweak defaults {{{
-    diff = diff --word-diff
-    branch = branch -ra
-    grep = grep -Ii
     bra = branch -ra
     ai = add --interactive
     # grep on filename
@@ -85,7 +87,8 @@
     ls = log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --graph --oneline --all
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat --graph --all
     lc = "!f() { git ll "$1"^.."$1"; }; f"
-    lnc = log --pretty=format:"%h\\ %s\\ [%cn]" fl = log -u
+    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+    fl = log -u
     filelog = log -u
     # }}}
     # diff {{{
@@ -178,3 +181,11 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+# GitHub auth via `gh auth login` {{{
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
+# }}}
