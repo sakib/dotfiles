@@ -34,9 +34,22 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 setopt histignorealldups sharehistory
 
-# WSL: open links in the Windows browser
+# WSL: open links in the Windows browser, and wt-backup to save Windows
+# Terminal settings into this repo (install.ps1 restores them)
 if [[ -n "$WSL_DISTRO_NAME" ]]; then
   export BROWSER="explorer.exe"
+
+  _dotfiles_dir=${${(%):-%x}:A:h}
+  wt-backup() {
+    local win_temp ps1
+    win_temp=$(wslpath "$(powershell.exe -NoProfile -Command '$env:TEMP' | tr -d '\r')")
+    ps1="$win_temp/dotfiles-install.ps1"
+    cp "$_dotfiles_dir/install.ps1" "$ps1"
+    DOTFILES_WT_BACKUP_TO="$(wslpath -w "$_dotfiles_dir/windows-terminal")" WSLENV="${WSLENV:+$WSLENV:}DOTFILES_WT_BACKUP_TO" \
+      powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(wslpath -w "$ps1")"
+    rm -f "$ps1"
+    git -C "$_dotfiles_dir" status --short -- windows-terminal
+  }
 fi
 
 # fzf keybindings: Ctrl+R history search, Ctrl+T file picker, Alt+C cd

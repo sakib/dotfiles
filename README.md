@@ -31,7 +31,7 @@ DOTFILES_UPDATE=1 ~/.dotfiles/install.sh
 
 | | macOS | Linux | Windows |
 |---|---|---|---|
-| Terminal | iTerm2 + DimmedMonokai preset | your terminal | Windows Terminal (your color scheme is kept) |
+| Terminal | iTerm2 + DimmedMonokai preset | your terminal | Windows Terminal with [your saved settings](#windows-terminal-settings) |
 | Font | MesloLGS NF | MesloLGS NF (desktop) | MesloLGS NF, set on WSL profiles |
 | Shell | zsh, [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh), [Powerlevel10k](https://github.com/romkatv/powerlevel10k), [autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) | same | same, inside WSL |
 | Tools | via mise | via mise | via mise, inside WSL |
@@ -56,8 +56,17 @@ DOTFILES_UPDATE=1 ~/.dotfiles/install.sh
 | `.vimrc` | `~/.vimrc` |
 | `.config/mise/config.toml` | `~/.config/mise/config.toml` |
 | `DimmedMonokai.itermcolors` | imported into iTerm2 |
+| `windows-terminal/` | restored into Windows Terminal (see below) |
 
 The files are symlinked, so edit them in `~/.dotfiles` and commit.
+
+### Windows Terminal settings
+
+Windows Terminal rewrites its settings file whenever you change something in the Settings UI, so it's saved as a copy instead of a link. After changing settings, run this in WSL, then commit:
+```sh
+wt-backup
+```
+This saves `settings.json` and any tab icons or background images from your user folder into `windows-terminal/`. Your Windows home folder is stored as `%USERPROFILE%`, so it works under any username. `install.ps1` restores both. It won't overwrite changes you've made since the last backup or restore: it warns you instead, and every overwrite keeps a timestamped `.bak`.
 
 **Machine-specific settings and secrets** go in untracked files, never in this repo:
 - `~/.zshrc.local` and `~/.bashrc.local` for API keys and per-machine aliases.
